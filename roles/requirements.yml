@@ -1,0 +1,4 @@
+---
+roles:
+  # install zabbix agent from Galaxy
+  - name: dj-wasabi.zabbix-agent

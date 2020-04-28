@@ -1,0 +1,7 @@
+---
+# tasks file for bwzabbix agent installation
+ - name: Configure Zabbix Agent
+   become: true
+   hosts: all
+   roles:
+    - dj-wasabi.zabbix-agent
