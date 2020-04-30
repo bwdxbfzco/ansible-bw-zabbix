@@ -5,11 +5,11 @@
    hosts: all
    roles: 
     - dj-wasabi.zabbix-agent
-      vars:
-        zabbix_agent_enableremotecommands: 1
-        zabbix_agent_logremotecommands: 1
-        zabbix_url: http://zabbix-dc2.bw.ae
-        zabbix_api_create_hosts: true
-        zabbix_api_create_hostgroup: true
-        zabbix_create_host: present
-        zabbix_useuip: 1
+   vars:
+    zabbix_agent_enableremotecommands: 1
+    zabbix_agent_logremotecommands: 1
+    zabbix_url: http://zabbix-dc2.bw.ae
+    zabbix_api_create_hosts: true
+    zabbix_api_create_hostgroup: true
+    zabbix_create_host: present
+    zabbix_useuip: 1
