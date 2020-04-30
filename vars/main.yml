@@ -1,6 +1,1 @@
 ---
-# vars for zabbix server
-zabbix_agent_server: zabbix-dc2.apps.ae
-zabbix_agent_serveractive: zabbix-dc2.apps.ae
-zabbix_agent_enableremotecommands: 1
-zabbix_agent_logremotecommands: 1
