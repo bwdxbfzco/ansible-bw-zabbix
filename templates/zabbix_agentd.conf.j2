@@ -1,8 +1,8 @@
-PidFile=/var/run/zabbix/zabbix_agentd.pid
-LogFile=/var/log/zabbix/zabbix_agentd.log
+PidFile=/var/run/zabbix/zabbix_agent2.pid
+LogFile=/var/log/zabbix/zabbix_agent2.log
 LogFileSize=0
 DebugLevel=3
-Server=zabbix2-dc2.bw.ae
-ServerActive=zabbix2-dc2.bw.ae
-Hostname={{ inventory_hostname }}
+Server={{ zabbix_agent_server }}
+ServerActive={{ zabbix_agent_server }}
+Hostname=system.hostname
 Include=/etc/zabbix/zabbix_agent2.d/*.conf

@@ -18,10 +18,16 @@
       apt:
         update_cache: yes
 
-    - name: Install Zabbix Agent
+    - name: Install Zabbix Agent2
       apt:
         name: zabbix-agent2
         state: present
+
+    - name: Add User to Docker Group
+      user:
+        name: zabbix
+        groups: docker
+        append: yes
 
     - name: Copy Zabbix Agent Configuration File
       template:
@@ -31,7 +37,7 @@
         - restart zabbix-agent2
 
   handlers:
-    - name: restart zabbix-agent
+    - name: restart zabbix-agent2
       service:
         name: zabbix-agent2
         state: restarted
