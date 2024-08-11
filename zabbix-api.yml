@@ -1,0 +1,27 @@
+---
+- name: Add host to Zabbix monitoring
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Add new host
+      zabbix_host:
+        server_url: http://zabbix2-dc2.bw.ae
+        login_user: anoop
+        login_password: spiderMan05
+        host_name: MyHost
+        visible_name: MyVisibleHostName
+        description: My Host Description
+        host_groups:
+          - Linux servers
+        link_templates:
+          - Template OS Linux
+        status: enabled
+        state: present
+        interfaces:
+          - type: 1
+            main: 1
+            useip: 1
+            ip: 10.10.10.10
+            dns: ""
+            port: "10050"
